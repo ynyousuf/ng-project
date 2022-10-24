@@ -1,0 +1,21 @@
+<div class="container-lg">
+  <table class="table table-striped mt-4" border="1">
+      <thead>
+          <tr>
+              <th>SL</th>
+              <th>Name</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let num of testList">
+              <td>{{num.slNo}}</td>
+              <td>{{num.name}}</td>
+              <td>
+                  <!-- <button class="btn btn-secondary" (click)="gotoLink(num.slNo) ">Link</button> -->
+                  <button class="btn btn-secondary" [routerLink]="['main/',num.slNo,'sub-one']">Link</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
